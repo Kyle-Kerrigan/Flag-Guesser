@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the Flag</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      #flag-container {
+        display: inline-block;
+        margin-top: 1em;
+        position: relative;
+      }
+
+      #flag {
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      #guess {
+        margin-top: 1em;
+      }
+
+      #skip {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess the Flag</h1>
+    <form action="#" method="post">
+      <div id="flag-container">
+        <img id="flag" src="" alt="Flag">
+        <input type="text" id="guess" name="guess" placeholder="Enter your guess">
+        <button type="submit" name="submit">Submit</button>
+        <button type="button" id="skip">Skip</button>
+      </div>
+    </form>
+    <p id="result"></p>
+
+    <script>
+      const countries = ["china", "india", "europe", "arab-league", "united-states-of-america", "indonesia", "brazil", "pakistan", "nigeria", "bangladesh", "russia", "japan", "mexico", "ethiopia", "philippines", "egypt", "vietnam", "congo-democratic-republic-of-the", "iran", "turkey", "germany", "thailand", "united-kingdom", "france", "italy", "myanmar", "england", "south-africa", "tanzania", "south-korea", "spain", "colombia", "kenya", "argentina", "ukraine", "algeria", "uganda", "iraq", "poland", "sudan", "canada", "afghanistan", "morocco", "malaysia", "venezuela", "peru", "uzbekistan", "nepal", "angola", "saudi-arabia", "yemen", "ghana", "mozambique", "north-korea", "madagascar", "cameroon", "cote-d-ivoire", "taiwan", "australia", "sri-lanka", "romania", "burkina-faso", "syria", "niger", "malawi", "kazakhstan", "mali", "chile", "netherlands", "ecuador", "cambodia", "zambia", "guatemala", "senegal", "zimbabwe", "south-sudan", "guinea", "chad", "rwanda", "belgium", "burundi", "tunisia", "cuba", "bolivia", "benin", "somalia", "portugal", "greece", "dominican-republic", "czech-republic", "haiti", "jordan", "azerbaijan", "sweden", "hungary", "belarus", "israel", "honduras", "austria", "tajikistan", "switzerland", "togo", "hongkong", "laos", "serbia", "bulgaria", "paraguay", "papua-new-guinea", "libya", "lebanon", "el-salvador", "sierra-leone", "united-arab-emirates", "nicaragua", "eritrea", "singapore", "kyrgyzstan", "central-african-republic", "denmark", "finland", "slovakia", "turkmenistan", "norway", "scotland", "ireland", "congo-republic-of-the", "costa-rica", "georgia", "liberia", "palestine", "new-zealand", "croatia", "mauritania", "panama", "bosnia-and-herzegovina", "moldova", "oman", "uruguay", "puerto-rico", "mongolia", "wales", "albania", "armenia", "jamaica", "kuwait", "lithuania", "namibia", "qatar", "botswana", "north-macedonia", "gambia", "slovenia", "lesotho", "latvia", "kosovo", "st-patrick", "northern-ireland", "guinea-bissau", "gabon", "swaziland", "bahrain", "mauritius", "east-timor", "estonia", "cyprus", "trinidad-and-tobago", "fiji", "djibouti", "comoros", "equatorial-guinea", "bhutan", "guyana", "solomon-islands", "montenegro", "macau", "luxembourg", "suriname", "cape-verde", "brunei", "malta", "guadeloupe", "maldives", "belize", "iceland", "bahamas", "barbados", "vanuatu", "new-caledonia", "sao-tome-and-principe", "samoa", "guam", "saint-lucia", "curacao", "aruba", "grenada", "kiribati", "tonga", "micronesia", "saint-vincent-and-the-grenadines", "antigua-and-barbuda", "seychelles", "andorra", "marshall-islands", "dominica", "greenland", "saint-kitts-and-nevis", "northern-mariana-islands", "faroe-islands", "st-martin", "liechtenstein", "san-marino", "monaco", "palau", "bonaire", "tuvalu", "nauru", "st-eustatius", "saba", "niue", "vatican-city"];
+      const friendlyCountries = ["China", "India", "Europe", "the Arab League", "United States, the", "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh", "Russia", "Japan", "Mexico", "Ethiopia", "Philippines, the", "Egypt", "Vietnam", "Congo, Democratic Republic of the", "Iran", "Turkey", "Germany", "Thailand", "United Kingdom, the", "France", "Italy", "Myanmar", "England", "South Africa", "Tanzania", "Korea, South", "Spain", "Colombia", "Kenya", "Argentina", "Ukraine", "Algeria", "Uganda", "Iraq", "Poland", "Sudan", "Canada", "Afghanistan", "Morocco", "Malaysia", "Venezuela", "Peru", "Uzbekistan", "Nepal", "Angola", "Saudi Arabia", "Yemen", "Ghana", "Mozambique", "Korea, North", "Madagascar", "Cameroon", "Côte d’ Ivoire", "Taiwan", "Australia", "Sri Lanka", "Romania", "Burkina Faso", "Syria", "Niger", "Malawi", "Kazakhstan", "Mali", "Chile", "Netherlands, the", "Ecuador", "Cambodia", "Zambia", "Guatemala", "Senegal", "Zimbabwe", "South Sudan", "Guinea", "Chad", "Rwanda", "Belgium", "Burundi", "Tunisia", "Cuba", "Bolivia", "Benin", "Somalia", "Portugal", "Greece", "Dominican Republic, the", "Czech Republic, the", "Haiti", "Jordan", "Azerbaijan", "Sweden", "Hungary", "Belarus", "Israel", "Honduras", "Austria", "Tajikistan", "Switzerland", "Togo", "Hong Kong", "Laos", "Serbia", "Bulgaria", "Paraguay", "Papua New Guinea", "Libya", "Lebanon", "El Salvador", "Sierra Leone", "United Arab Emirates, the", "Nicaragua", "Eritrea", "Singapore", "Kyrgyzstan", "Central-African Republic, the", "Denmark", "Finland", "Slovakia", "Turkmenistan", "Norway", "Scotland", "Ireland", "Congo, Republic of the", "Costa Rica", "Georgia", "Liberia", "Palestine", "New Zealand", "Croatia", "Mauritania", "Panama", "Bosnia and Herzegovina", "Moldova", "Oman", "Uruguay", "Puerto Rico", "Mongolia", "Wales", "Albania", "Armenia", "Jamaica", "Kuwait", "Lithuania", "Namibia", "Qatar", "Botswana", "North Macedonia", "Gambia, the", "Slovenia", "Lesotho", "Latvia", "Kosovo", "Saint Patrick", "Northern Ireland", "Guinea-Bissau", "Gabon", "Swaziland", "Bahrain", "Mauritius", "East Timor", "Estonia", "Cyprus", "Trinidad and Tobago", "Fiji", "Djibouti", "Comoros", "Equatorial Guinea", "Bhutan", "Guyana", "Solomon Islands, the", "Montenegro", "Macao", "Luxembourg", "Suriname", "Cape Verde", "Brunei", "Malta", "Guadeloupe", "Maldives, the", "Belize", "Iceland", "Bahamas, the", "Barbados", "Vanuatu", "New Caledonia", "São Tomé and Príncipe", "Samoa", "Guam", "Saint Lucia", "Curaçao", "Aruba", "Grenada", "Kiribati", "Tonga", "Micronesia", "Saint Vincent and the Grenadines", "Antigua and Barbuda", "Seychelles, the", "Andorra", "Marshall Islands, the", "Dominica", "Greenland", "Saint Kitts and Nevis", "the Northern Mariana Islands", "the Faroe Islands", "St. Martin", "Liechtenstein", "San Marino", "Monaco", "Palau", "Bonaire", "Tuvalu", "Nauru", "St. Eustatius", "Saba", "Niue", "Vatican City"];
+      const flagContainer = document.getElementById("flag-container");
+      const flagImg = document.getElementById("flag");
+      const guessInput = document.getElementById("guess");
+      const skipButton = document.getElementById("skip");
+      const result = document.getElementById("result");
+      let currentCountry = getRandomCountry();
+
+      function getRandomCountry() {
+        return countries[Math.floor(Math.random() * countries.length)];
+      }
+
+      function getFlagUrl(country) {
+        return `https://cdn.countryflags.com/thumbs/${country}/flag-400.png`;
+      }
+
+      function displayFlag(country) {
+        const url = getFlagUrl(country);
+        flagImg.src = url;
+        flagImg.alt = `Flag of ${country}`;
+        guessInput.value = "";
+        guessInput.focus();
+        currentCountry = country;
+      }
+
+      function checkGuess(event) {
+        event.preventDefault();
+        const guess = guessInput.value.toLowerCase();
+
+        if (guess === friendlyCountries[countries.indexOf(currentCountry)].toLowerCase()) {
+          result.textContent = "Correct!";
+          let newCountry = getRandomCountry();
+          while (newCountry === currentCountry) {
+            newCountry = getRandomCountry();
+          }
+          displayFlag(newCountry);
+        } else {
+          result.textContent = "Try again!";
+        }
+      }
+
+      function skipFlag() {
+        let newCountry = getRandomCountry();
+        while (newCountry === currentCountry) {
+          newCountry = getRandomCountry();
+        }
+        displayFlag(newCountry);
+      }
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", checkGuess);
+      skipButton.addEventListener("click", skipFlag);
+
+      // display the first flag
+      displayFlag(currentCountry);
+    </script>
+  </body>
+</html>
