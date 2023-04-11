@@ -42,6 +42,7 @@
         <br><input type="text" id="guess" name="guess" placeholder="Enter your guess"></div><br>
         <button type="submit" name="submit">Submit</button>
         <button type="button" id="skip">Skip</button>
+        <button type="button" id="reveal">Reveal</button>
       </div>
     </form>
     <p id="result"></p>
@@ -512,6 +513,7 @@
         flagImg.alt = `Flag of ${country}`;
         guessInput.value = "";
         guessInput.focus();
+        result.textContent = ""; // add this line to clear the result element
         currentCountry = country;
       }
 
@@ -541,9 +543,17 @@
         displayFlag(newCountry);
       }
 
+      function revealAnswer() {
+        const countryIndex = countries.indexOf(currentCountry);
+        const possibleAnswers = friendlyCountries[countryIndex].answers; 
+        result.textContent = `The answer is ${possibleAnswers[0]}`;
+      }
+
       const form = document.querySelector("form");
       form.addEventListener("submit", checkGuess);
       skipButton.addEventListener("click", skipFlag);
+      const revealButton = document.getElementById("reveal");
+      revealButton.addEventListener("click", revealAnswer);
 
       // display the first flag
       displayFlag(currentCountry);
