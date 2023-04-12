@@ -528,7 +528,7 @@
         flagImg.src = url;
         flagImg.alt = `Flag of ${country}`;
         guessInput.value = "";
-        guessInput.focus();
+        guessInput.focus({ preventScroll: true });
         result.textContent = ""; // add this line to clear the result element
         currentCountry = country;
       }
