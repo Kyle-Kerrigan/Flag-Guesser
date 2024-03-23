@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #DBF9FC;
+  }
+
+  #flag-container {
+    display: inline-block;
+    margin-top: 1em;
+    position: relative;
+  }
+
+  #flag {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  #guess {
+    margin-top: 1em;
+    touch-action: manipulation;
+    outline: none;
+    border: none;
+    width: 75%;
+    height: 2em;
+    border-radius: 0.5em;
+    text-align: center;
+  }
+
+  #skip {
+    margin-top: 1em;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  #reveal {
+    margin-top: 1em;
+    touch-action: manipulation;
+    user-select: none;
+  }
