@@ -15,15 +15,27 @@ body {
     height: 200px;
   }
 
-  #guess {
-    margin-top: 1em;
-    touch-action: manipulation;
-    outline: none;
-    border: none;
-    width: 75%;
-    height: 2em;
+  #guess-container {
     border-radius: 0.5em;
+    background: white;
+    width: 75%;
+    margin: 1em auto; /* Adjusted to remove the top margin */
+    border-radius: 0.5em 0.5em 0.5em 0.5em; /* Top corners rounded */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 0; /* Remove padding to eliminate white space */
+    position: relative; /* Ensures suggestions are positioned relative to this container */
+  }
+  
+  #guess {
+    border-radius: 0.5em 0.5em 0 0;
+    width: calc(100% - 24px); /* Adjust to account for padding */
+    height: 1.5em;
+    border-radius: 0.5em 0.5em 0 0; /* Rounded corners on top only */
     text-align: center;
+    border: none;
+    outline: none;
+    padding: 5px; /* Added padding for visual spacing inside the input */
+    margin: 0; /* Ensure no additional margin */
   }
 
   #skip {
@@ -37,3 +49,35 @@ body {
     touch-action: manipulation;
     user-select: none;
   }
+
+  .suggestions {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position directly below the input field */
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Slight shadow for depth */
+    border-radius: 0 0 0.5em 0.5em; /* Rounded corners at the bottom */
+    z-index: 10;
+    max-height: 300px; /* Adjust based on your needs */
+    overflow-y: auto; /* Allows scrolling within the dropdown */
+    width: auto; /* Ensures the dropdown matches the width of the guess-container */
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .suggestions div {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Optional: adds a divider between suggestions */
+  }
+  
+  .suggestions div:last-child {
+    border-bottom: none; /* Removes border from the last suggestion */
+  }
+  
+  .suggestions div:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
