@@ -28,12 +28,23 @@ body {
   #guess {
     border-radius: 0.5em 0.5em 0 0;
     width: calc(100% - 24px); /* Adjust to account for padding */
-    height: 1.5em;
+    height: 2.5em;
     text-align: center;
     border: none;
     outline: none;
     padding: 5px; /* Added padding for visual spacing inside the input */
     margin: 0; /* Ensure no additional margin */
+    font-size: 0.8em;
+  }
+
+  button {
+    margin-top: 1em;
+    touch-action: manipulation;
+    user-select: none;
+    width: auto;
+    height: 2em;
+    border-radius: 0.5em;
+    border: 1px solid #949494;
   }
 
   #skip {
@@ -106,8 +117,13 @@ body {
     width: 90%;
   }
 
+  button {
+    height: 1.8em;
+  }
+
   #guess {
-    height: 1.2em;
+    height: 2em;
+    font-size: 1em;
   }
 
   .suggestions {
