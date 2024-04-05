@@ -92,3 +92,25 @@ body {
     font-size: 1em;
     color: #333;
 }
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  #flag {
+    height: 15em;
+  }
+
+  #guess-container {
+    width: 90%;
+  }
+
+  #guess {
+    height: 1.2em;
+  }
+
+  .suggestions {
+    max-height: 200px;
+  }
+}
