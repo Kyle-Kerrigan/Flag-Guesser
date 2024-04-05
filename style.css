@@ -12,7 +12,7 @@ body {
 
   #flag {
     max-width: 100%;
-    height: 200px;
+    height: 20em;
   }
 
   #guess-container {
@@ -20,7 +20,6 @@ body {
     background: white;
     width: 75%;
     margin: 1em auto; /* Adjusted to remove the top margin */
-    border-radius: 0.5em 0.5em 0.5em 0.5em; /* Top corners rounded */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     padding: 0; /* Remove padding to eliminate white space */
     position: relative; /* Ensures suggestions are positioned relative to this container */
@@ -30,7 +29,6 @@ body {
     border-radius: 0.5em 0.5em 0 0;
     width: calc(100% - 24px); /* Adjust to account for padding */
     height: 1.5em;
-    border-radius: 0.5em 0.5em 0 0; /* Rounded corners on top only */
     text-align: center;
     border: none;
     outline: none;
@@ -81,3 +79,16 @@ body {
     cursor: pointer;
   }
   
+  .highlighted {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+
+  #result {
+    height: 1em;
+    padding: 10px 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}

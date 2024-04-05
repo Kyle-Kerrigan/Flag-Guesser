@@ -1,0 +1,1689 @@
+{
+  "countries": [
+      {
+          "key": "afghanistan",
+          "name": "Afghanistan",
+          "answers": [
+              "afghanistan"
+          ]
+      },
+      {
+          "key": "albania",
+          "name": "Albania",
+          "answers": [
+              "albania",
+              "republic of albania"
+          ]
+      },
+      {
+          "key": "algeria",
+          "name": "Algeria",
+          "answers": [
+              "algeria"
+          ]
+      },
+      {
+          "key": "andorra",
+          "name": "Andorra",
+          "answers": [
+              "andorra",
+              "principality of andorra"
+          ]
+      },
+      {
+          "key": "angola",
+          "name": "Angola",
+          "answers": [
+              "angola"
+          ]
+      },
+      {
+          "key": "antigua-and-barbuda",
+          "name": "Antigua and Barbuda",
+          "answers": [
+              "antigua and barbuda"
+          ]
+      },
+      {
+          "key": "arab-league",
+          "name": "the Arab League",
+          "answers": [
+              "arab league",
+              "league of arab states"
+          ]
+      },
+      {
+          "key": "argentina",
+          "name": "Argentina",
+          "answers": [
+              "argentina",
+              "argentine republic"
+          ]
+      },
+      {
+          "key": "armenia",
+          "name": "Armenia",
+          "answers": [
+              "armenia",
+              "republic of armenia"
+          ]
+      },
+      {
+          "key": "aruba",
+          "name": "Aruba",
+          "answers": [
+              "aruba"
+          ]
+      },
+      {
+          "key": "australia",
+          "name": "Australia",
+          "answers": [
+              "australia"
+          ]
+      },
+      {
+          "key": "austria",
+          "name": "Austria",
+          "answers": [
+              "austria"
+          ]
+      },
+      {
+          "key": "azerbaijan",
+          "name": "Azerbaijan",
+          "answers": [
+              "azerbaijan"
+          ]
+      },
+      {
+          "key": "bahamas",
+          "name": "Bahamas",
+          "answers": [
+              "bahamas",
+              "commonwealth of the bahamas"
+          ]
+      },
+      {
+          "key": "bahrain",
+          "name": "Bahrain",
+          "answers": [
+              "bahrain",
+              "kingdom of bahrain"
+          ]
+      },
+      {
+          "key": "bangladesh",
+          "name": "Bangladesh",
+          "answers": [
+              "bangladesh",
+              "people's republic of bangladesh"
+          ]
+      },
+      {
+          "key": "barbados",
+          "name": "Barbados",
+          "answers": [
+              "barbados"
+          ]
+      },
+      {
+          "key": "belarus",
+          "name": "Belarus",
+          "answers": [
+              "belarus"
+          ]
+      },
+      {
+          "key": "belgium",
+          "name": "Belgium",
+          "answers": [
+              "belgium"
+          ]
+      },
+      {
+          "key": "belize",
+          "name": "Belize",
+          "answers": [
+              "belize"
+          ]
+      },
+      {
+          "key": "benin",
+          "name": "Benin",
+          "answers": [
+              "benin"
+          ]
+      },
+      {
+          "key": "bhutan",
+          "name": "Bhutan",
+          "answers": [
+              "bhutan",
+              "kingdom of bhutan"
+          ]
+      },
+      {
+          "key": "bolivia",
+          "name": "Bolivia",
+          "answers": [
+              "bolivia"
+          ]
+      },
+      {
+          "key": "bonaire",
+          "name": "Bonaire",
+          "answers": [
+              "bonaire"
+          ]
+      },
+      {
+          "key": "bosnia-and-herzegovina",
+          "name": "Bosnia and Herzegovina",
+          "answers": [
+              "bosnia and herzegovina",
+              "bosnia-and-herzegovina",
+              "bosnia and herzegovina (bosnia and herzegovina)"
+          ]
+      },
+      {
+          "key": "botswana",
+          "name": "Botswana",
+          "answers": [
+              "botswana",
+              "republic of botswana"
+          ]
+      },
+      {
+          "key": "brazil",
+          "name": "Brazil",
+          "answers": [
+              "brazil",
+              "federative republic of brazil"
+          ]
+      },
+      {
+          "key": "brunei",
+          "name": "Brunei",
+          "answers": [
+              "brunei",
+              "brunei darussalam",
+              "negara brunei darussalam"
+          ]
+      },
+      {
+          "key": "bulgaria",
+          "name": "Bulgaria",
+          "answers": [
+              "bulgaria"
+          ]
+      },
+      {
+          "key": "burkina-faso",
+          "name": "Burkina Faso",
+          "answers": [
+              "burkina faso"
+          ]
+      },
+      {
+          "key": "burundi",
+          "name": "Burundi",
+          "answers": [
+              "burundi"
+          ]
+      },
+      {
+          "key": "cambodia",
+          "name": "Cambodia",
+          "answers": [
+              "cambodia"
+          ]
+      },
+      {
+          "key": "cameroon",
+          "name": "Cameroon",
+          "answers": [
+              "cameroon"
+          ]
+      },
+      {
+          "key": "canada",
+          "name": "Canada",
+          "answers": [
+              "canada"
+          ]
+      },
+      {
+          "key": "cape-verde",
+          "name": "Cape Verde",
+          "answers": [
+              "cape verde",
+              "republic of cabo verde"
+          ]
+      },
+      {
+          "key": "central-african-republic",
+          "name": "Central African Republic",
+          "answers": [
+              "central african republic",
+              "central-african-republic"
+          ]
+      },
+      {
+          "key": "chad",
+          "name": "Chad",
+          "answers": [
+              "chad"
+          ]
+      },
+      {
+          "key": "chile",
+          "name": "Chile",
+          "answers": [
+              "chile"
+          ]
+      },
+      {
+          "key": "china",
+          "name": "China",
+          "answers": [
+              "china",
+              "people's republic of china",
+              "prc"
+          ]
+      },
+      {
+          "key": "colombia",
+          "name": "Colombia",
+          "answers": [
+              "colombia",
+              "republic of colombia"
+          ]
+      },
+      {
+          "key": "comoros",
+          "name": "Comoros",
+          "answers": [
+              "comoros",
+              "union of the comoros"
+          ]
+      },
+      {
+          "key": "congo-democratic-republic-of-the",
+          "name": "Democratic Republic of the Congo",
+          "answers": [
+              "congo",
+              "democratic republic of the congo",
+              "drc"
+          ]
+      },
+      {
+          "key": "congo-republic-of-the",
+          "name": "Congo (Republic of the)",
+          "answers": [
+              "congo (republic of the)",
+              "congo-republic-of-the",
+              "congo-brazzaville",
+              "congo republic of the",
+              "congo republic",
+              "congo republic of the (brazzaville)",
+              "congo",
+              "republic of the congo",
+              "republic of congo",
+              "republic of the congo (brazzaville)"
+          ]
+      },
+      {
+          "key": "costa-rica",
+          "name": "Costa Rica",
+          "answers": [
+              "costa rica",
+              "costa-rica"
+          ]
+      },
+      {
+          "key": "cote-d-ivoire",
+          "name": "C\u00f4te d'Ivoire",
+          "answers": [
+              "cote d'ivoire",
+              "ivory coast",
+              "cote d ivoire"
+          ]
+      },
+      {
+          "key": "croatia",
+          "name": "Croatia",
+          "answers": [
+              "croatia"
+          ]
+      },
+      {
+          "key": "cuba",
+          "name": "Cuba",
+          "answers": [
+              "cuba"
+          ]
+      },
+      {
+          "key": "curacao",
+          "name": "Curacao",
+          "answers": [
+              "curacao"
+          ]
+      },
+      {
+          "key": "cyprus",
+          "name": "Cyprus",
+          "answers": [
+              "cyprus",
+              "republic of cyprus"
+          ]
+      },
+      {
+          "key": "czech-republic",
+          "name": "Czech Republic",
+          "answers": [
+              "czech republic"
+          ]
+      },
+      {
+          "key": "denmark",
+          "name": "Denmark",
+          "answers": [
+              "denmark"
+          ]
+      },
+      {
+          "key": "djibouti",
+          "name": "Djibouti",
+          "answers": [
+              "djibouti",
+              "republic of djibouti"
+          ]
+      },
+      {
+          "key": "dominica",
+          "name": "Dominica",
+          "answers": [
+              "dominica",
+              "commonwealth of dominica"
+          ]
+      },
+      {
+          "key": "dominican-republic",
+          "name": "Dominican Republic",
+          "answers": [
+              "dominican republic"
+          ]
+      },
+      {
+          "key": "east-timor",
+          "name": "East Timor",
+          "answers": [
+              "east timor",
+              "timor-leste",
+              "democratic republic of timor-leste"
+          ]
+      },
+      {
+          "key": "ecuador",
+          "name": "Ecuador",
+          "answers": [
+              "ecuador"
+          ]
+      },
+      {
+          "key": "egypt",
+          "name": "Egypt",
+          "answers": [
+              "egypt",
+              "arab republic of egypt"
+          ]
+      },
+      {
+          "key": "el-salvador",
+          "name": "El Salvador",
+          "answers": [
+              "el salvador",
+              "el-salvador",
+              "salvador"
+          ]
+      },
+      {
+          "key": "england",
+          "name": "England",
+          "answers": [
+              "england"
+          ]
+      },
+      {
+          "key": "equatorial-guinea",
+          "name": "Equatorial Guinea",
+          "answers": [
+              "equatorial guinea",
+              "republic of equatorial guinea",
+              "Equatorial Guinea"
+          ]
+      },
+      {
+          "key": "eritrea",
+          "name": "Eritrea",
+          "answers": [
+              "eritrea"
+          ]
+      },
+      {
+          "key": "estonia",
+          "name": "Estonia",
+          "answers": [
+              "estonia",
+              "republic of estonia"
+          ]
+      },
+      {
+          "key": "ethiopia",
+          "name": "Ethiopia",
+          "answers": [
+              "ethiopia",
+              "federal democratic republic of ethiopia"
+          ]
+      },
+      {
+          "key": "europe",
+          "name": "Europe",
+          "answers": [
+              "europe",
+              "eu",
+              "european union"
+          ]
+      },
+      {
+          "key": "faroe-islands",
+          "name": "Faroe Islands",
+          "answers": [
+              "faroe islands",
+              "faeroe islands",
+              "foroyar"
+          ]
+      },
+      {
+          "key": "fiji",
+          "name": "Fiji",
+          "answers": [
+              "fiji",
+              "republic of fiji"
+          ]
+      },
+      {
+          "key": "finland",
+          "name": "Finland",
+          "answers": [
+              "finland"
+          ]
+      },
+      {
+          "key": "france",
+          "name": "France",
+          "answers": [
+              "france",
+              "french republic"
+          ]
+      },
+      {
+          "key": "gabon",
+          "name": "Gabon",
+          "answers": [
+              "gabon",
+              "gabonese republic"
+          ]
+      },
+      {
+          "key": "gambia",
+          "name": "Gambia",
+          "answers": [
+              "gambia",
+              "the gambia"
+          ]
+      },
+      {
+          "key": "georgia",
+          "name": "Georgia",
+          "answers": [
+              "georgia"
+          ]
+      },
+      {
+          "key": "germany",
+          "name": "Germany",
+          "answers": [
+              "germany",
+              "federal republic of germany"
+          ]
+      },
+      {
+          "key": "ghana",
+          "name": "Ghana",
+          "answers": [
+              "ghana"
+          ]
+      },
+      {
+          "key": "greece",
+          "name": "Greece",
+          "answers": [
+              "greece"
+          ]
+      },
+      {
+          "key": "greenland",
+          "name": "Greenland",
+          "answers": [
+              "greenland",
+              "kalaallit nunaat"
+          ]
+      },
+      {
+          "key": "grenada",
+          "name": "Grenada",
+          "answers": [
+              "grenada"
+          ]
+      },
+      {
+          "key": "guadeloupe",
+          "name": "Guadeloupe",
+          "answers": [
+              "guadeloupe"
+          ]
+      },
+      {
+          "key": "guam",
+          "name": "Guam",
+          "answers": [
+              "guam"
+          ]
+      },
+      {
+          "key": "guatemala",
+          "name": "Guatemala",
+          "answers": [
+              "guatemala"
+          ]
+      },
+      {
+          "key": "guinea",
+          "name": "Guinea",
+          "answers": [
+              "guinea"
+          ]
+      },
+      {
+          "key": "guinea-bissau",
+          "name": "Guinea-Bissau",
+          "answers": [
+              "guinea bissau",
+              "guinea-bissau",
+              "republic of guinea-bissau",
+              "republic of guinea bissau"
+          ]
+      },
+      {
+          "key": "guyana",
+          "name": "Guyana",
+          "answers": [
+              "guyana",
+              "co-operative republic of guyana"
+          ]
+      },
+      {
+          "key": "haiti",
+          "name": "Haiti",
+          "answers": [
+              "haiti"
+          ]
+      },
+      {
+          "key": "honduras",
+          "name": "Honduras",
+          "answers": [
+              "honduras"
+          ]
+      },
+      {
+          "key": "hongkong",
+          "name": "Hong Kong",
+          "answers": [
+              "hong kong",
+              "hongkong"
+          ]
+      },
+      {
+          "key": "hungary",
+          "name": "Hungary",
+          "answers": [
+              "hungary"
+          ]
+      },
+      {
+          "key": "iceland",
+          "name": "Iceland",
+          "answers": [
+              "iceland",
+              "republic of iceland",
+              "l\u00fd\u00f0veldi\u00f0 \u00edsland"
+          ]
+      },
+      {
+          "key": "india",
+          "name": "India",
+          "answers": [
+              "india",
+              "republic of india"
+          ]
+      },
+      {
+          "key": "indonesia",
+          "name": "Indonesia",
+          "answers": [
+              "indonesia"
+          ]
+      },
+      {
+          "key": "iran",
+          "name": "Iran",
+          "answers": [
+              "iran",
+              "islamic republic of iran"
+          ]
+      },
+      {
+          "key": "iraq",
+          "name": "Iraq",
+          "answers": [
+              "iraq"
+          ]
+      },
+      {
+          "key": "ireland",
+          "name": "Ireland",
+          "answers": [
+              "ireland"
+          ]
+      },
+      {
+          "key": "israel",
+          "name": "Israel",
+          "answers": [
+              "israel"
+          ]
+      },
+      {
+          "key": "italy",
+          "name": "Italy",
+          "answers": [
+              "italy",
+              "italian republic"
+          ]
+      },
+      {
+          "key": "jamaica",
+          "name": "Jamaica",
+          "answers": [
+              "jamaica"
+          ]
+      },
+      {
+          "key": "japan",
+          "name": "Japan",
+          "answers": [
+              "japan"
+          ]
+      },
+      {
+          "key": "jordan",
+          "name": "Jordan",
+          "answers": [
+              "jordan"
+          ]
+      },
+      {
+          "key": "kazakhstan",
+          "name": "Kazakhstan",
+          "answers": [
+              "kazakhstan"
+          ]
+      },
+      {
+          "key": "kenya",
+          "name": "Kenya",
+          "answers": [
+              "kenya",
+              "republic of kenya"
+          ]
+      },
+      {
+          "key": "kiribati",
+          "name": "Kiribati",
+          "answers": [
+              "kiribati",
+              "republic of kiribati"
+          ]
+      },
+      {
+          "key": "kosovo",
+          "name": "Kosovo",
+          "answers": [
+              "kosovo",
+              "republic of kosovo"
+          ]
+      },
+      {
+          "key": "kuwait",
+          "name": "Kuwait",
+          "answers": [
+              "kuwait",
+              "state of kuwait"
+          ]
+      },
+      {
+          "key": "kyrgyzstan",
+          "name": "Kyrgyzstan",
+          "answers": [
+              "kyrgyzstan"
+          ]
+      },
+      {
+          "key": "laos",
+          "name": "Laos",
+          "answers": [
+              "laos"
+          ]
+      },
+      {
+          "key": "latvia",
+          "name": "Latvia",
+          "answers": [
+              "latvia",
+              "republic of latvia"
+          ]
+      },
+      {
+          "key": "lebanon",
+          "name": "Lebanon",
+          "answers": [
+              "lebanon"
+          ]
+      },
+      {
+          "key": "lesotho",
+          "name": "Lesotho",
+          "answers": [
+              "lesotho",
+              "kingdom of lesotho"
+          ]
+      },
+      {
+          "key": "liberia",
+          "name": "Liberia",
+          "answers": [
+              "liberia"
+          ]
+      },
+      {
+          "key": "libya",
+          "name": "Libya",
+          "answers": [
+              "libya"
+          ]
+      },
+      {
+          "key": "liechtenstein",
+          "name": "Liechtenstein",
+          "answers": [
+              "liechtenstein",
+              "principality of liechtenstein"
+          ]
+      },
+      {
+          "key": "lithuania",
+          "name": "Lithuania",
+          "answers": [
+              "lithuania",
+              "republic of lithuania"
+          ]
+      },
+      {
+          "key": "luxembourg",
+          "name": "Luxembourg",
+          "answers": [
+              "luxembourg",
+              "grand duchy of luxembourg"
+          ]
+      },
+      {
+          "key": "macau",
+          "name": "Macau",
+          "answers": [
+              "macau",
+              "macao special administrative region of the people's republic of china"
+          ]
+      },
+      {
+          "key": "madagascar",
+          "name": "Madagascar",
+          "answers": [
+              "madagascar"
+          ]
+      },
+      {
+          "key": "malawi",
+          "name": "Malawi",
+          "answers": [
+              "malawi"
+          ]
+      },
+      {
+          "key": "malaysia",
+          "name": "Malaysia",
+          "answers": [
+              "malaysia"
+          ]
+      },
+      {
+          "key": "maldives",
+          "name": "Maldives",
+          "answers": [
+              "maldives",
+              "republic of maldives"
+          ]
+      },
+      {
+          "key": "mali",
+          "name": "Mali",
+          "answers": [
+              "mali"
+          ]
+      },
+      {
+          "key": "malta",
+          "name": "Malta",
+          "answers": [
+              "malta",
+              "republic of malta"
+          ]
+      },
+      {
+          "key": "marshall-islands",
+          "name": "Marshall Islands",
+          "answers": [
+              "marshall islands",
+              "republic of the marshall islands"
+          ]
+      },
+      {
+          "key": "mauritania",
+          "name": "Mauritania",
+          "answers": [
+              "mauritania"
+          ]
+      },
+      {
+          "key": "mauritius",
+          "name": "Mauritius",
+          "answers": [
+              "mauritius",
+              "republic of mauritius"
+          ]
+      },
+      {
+          "key": "mexico",
+          "name": "Mexico",
+          "answers": [
+              "mexico",
+              "united mexican states"
+          ]
+      },
+      {
+          "key": "micronesia",
+          "name": "Micronesia",
+          "answers": [
+              "micronesia",
+              "federated states of micronesia"
+          ]
+      },
+      {
+          "key": "moldova",
+          "name": "Moldova",
+          "answers": [
+              "moldova"
+          ]
+      },
+      {
+          "key": "monaco",
+          "name": "Monaco",
+          "answers": [
+              "monaco"
+          ]
+      },
+      {
+          "key": "mongolia",
+          "name": "Mongolia",
+          "answers": [
+              "mongolia",
+              "mongolian people's republic"
+          ]
+      },
+      {
+          "key": "montenegro",
+          "name": "Montenegro",
+          "answers": [
+              "montenegro"
+          ]
+      },
+      {
+          "key": "morocco",
+          "name": "Morocco",
+          "answers": [
+              "morocco"
+          ]
+      },
+      {
+          "key": "mozambique",
+          "name": "Mozambique",
+          "answers": [
+              "mozambique"
+          ]
+      },
+      {
+          "key": "myanmar",
+          "name": "Myanmar",
+          "answers": [
+              "myanmar",
+              "republic of the union of myanmar"
+          ]
+      },
+      {
+          "key": "namibia",
+          "name": "Namibia",
+          "answers": [
+              "namibia",
+              "republic of namibia"
+          ]
+      },
+      {
+          "key": "nauru",
+          "name": "Nauru",
+          "answers": [
+              "nauru",
+              "republic of nauru"
+          ]
+      },
+      {
+          "key": "nepal",
+          "name": "Nepal",
+          "answers": [
+              "nepal"
+          ]
+      },
+      {
+          "key": "netherlands",
+          "name": "Netherlands",
+          "answers": [
+              "netherlands",
+              "holland"
+          ]
+      },
+      {
+          "key": "new-caledonia",
+          "name": "New Caledonia",
+          "answers": [
+              "new caledonia"
+          ]
+      },
+      {
+          "key": "new-zealand",
+          "name": "New Zealand",
+          "answers": [
+              "new zealand",
+              "aotearoa",
+              "aotearoa new zealand",
+              "new zealand (aotearoa)"
+          ]
+      },
+      {
+          "key": "nicaragua",
+          "name": "Nicaragua",
+          "answers": [
+              "nicaragua"
+          ]
+      },
+      {
+          "key": "niger",
+          "name": "Niger",
+          "answers": [
+              "niger"
+          ]
+      },
+      {
+          "key": "nigeria",
+          "name": "Nigeria",
+          "answers": [
+              "nigeria",
+              "federal republic of nigeria"
+          ]
+      },
+      {
+          "key": "niue",
+          "name": "Niue",
+          "answers": [
+              "niue"
+          ]
+      },
+      {
+          "key": "north-korea",
+          "name": "North Korea",
+          "answers": [
+              "north korea",
+              "dprk"
+          ]
+      },
+      {
+          "key": "north-macedonia",
+          "name": "North Macedonia",
+          "answers": [
+              "north macedonia",
+              "republic of north macedonia"
+          ]
+      },
+      {
+          "key": "northern-ireland",
+          "name": "Northern Ireland",
+          "answers": [
+              "northern ireland"
+          ]
+      },
+      {
+          "key": "northern-mariana-islands",
+          "name": "Northern Mariana Islands",
+          "answers": [
+              "northern mariana islands"
+          ]
+      },
+      {
+          "key": "norway",
+          "name": "Norway",
+          "answers": [
+              "norway"
+          ]
+      },
+      {
+          "key": "oman",
+          "name": "Oman",
+          "answers": [
+              "oman"
+          ]
+      },
+      {
+          "key": "pakistan",
+          "name": "Pakistan",
+          "answers": [
+              "pakistan",
+              "islamic republic of pakistan"
+          ]
+      },
+      {
+          "key": "palau",
+          "name": "Palau",
+          "answers": [
+              "palau",
+              "republic of palau"
+          ]
+      },
+      {
+          "key": "palestine",
+          "name": "Palestine",
+          "answers": [
+              "palestine"
+          ]
+      },
+      {
+          "key": "panama",
+          "name": "Panama",
+          "answers": [
+              "panama"
+          ]
+      },
+      {
+          "key": "papua-new-guinea",
+          "name": "Papua New Guinea",
+          "answers": [
+              "papua new guinea",
+              "papua-new-guinea"
+          ]
+      },
+      {
+          "key": "paraguay",
+          "name": "Paraguay",
+          "answers": [
+              "paraguay"
+          ]
+      },
+      {
+          "key": "peru",
+          "name": "Peru",
+          "answers": [
+              "peru"
+          ]
+      },
+      {
+          "key": "philippines",
+          "name": "Philippines",
+          "answers": [
+              "philippines",
+              "republic of the philippines"
+          ]
+      },
+      {
+          "key": "poland",
+          "name": "Poland",
+          "answers": [
+              "poland"
+          ]
+      },
+      {
+          "key": "portugal",
+          "name": "Portugal",
+          "answers": [
+              "portugal"
+          ]
+      },
+      {
+          "key": "puerto-rico",
+          "name": "Puerto Rico",
+          "answers": [
+              "puerto rico",
+              "puerto-rico"
+          ]
+      },
+      {
+          "key": "qatar",
+          "name": "Qatar",
+          "answers": [
+              "qatar",
+              "state of qatar"
+          ]
+      },
+      {
+          "key": "romania",
+          "name": "Romania",
+          "answers": [
+              "romania"
+          ]
+      },
+      {
+          "key": "russia",
+          "name": "Russia",
+          "answers": [
+              "russia",
+              "russian federation"
+          ]
+      },
+      {
+          "key": "rwanda",
+          "name": "Rwanda",
+          "answers": [
+              "rwanda"
+          ]
+      },
+      {
+          "key": "saba",
+          "name": "Saba",
+          "answers": [
+              "saba"
+          ]
+      },
+      {
+          "key": "saint-kitts-and-nevis",
+          "name": "Saint Kitts and Nevis",
+          "answers": [
+              "saint kitts and nevis",
+              "federation of saint christopher and nevis",
+              "saint kitts & nevis"
+          ]
+      },
+      {
+          "key": "saint-lucia",
+          "name": "Saint Lucia",
+          "answers": [
+              "saint lucia"
+          ]
+      },
+      {
+          "key": "saint-vincent-and-the-grenadines",
+          "name": "Saint Vincent and the Grenadines",
+          "answers": [
+              "saint vincent and the grenadines",
+              "saint vincent & the grenadines"
+          ]
+      },
+      {
+          "key": "samoa",
+          "name": "Samoa",
+          "answers": [
+              "samoa",
+              "independent state of samoa"
+          ]
+      },
+      {
+          "key": "san-marino",
+          "name": "San Marino",
+          "answers": [
+              "san marino",
+              "republic of san marino"
+          ]
+      },
+      {
+          "key": "sao-tome-and-principe",
+          "name": "Sao Tome and Principe",
+          "answers": [
+              "sao tome and principe",
+              "democratic republic of sao tome and principe"
+          ]
+      },
+      {
+          "key": "saudi-arabia",
+          "name": "Saudi Arabia",
+          "answers": [
+              "saudi arabia",
+              "saudi"
+          ]
+      },
+      {
+          "key": "scotland",
+          "name": "Scotland",
+          "answers": [
+              "scotland"
+          ]
+      },
+      {
+          "key": "senegal",
+          "name": "Senegal",
+          "answers": [
+              "senegal"
+          ]
+      },
+      {
+          "key": "serbia",
+          "name": "Serbia",
+          "answers": [
+              "serbia"
+          ]
+      },
+      {
+          "key": "seychelles",
+          "name": "Seychelles",
+          "answers": [
+              "seychelles",
+              "republic of seychelles"
+          ]
+      },
+      {
+          "key": "sierra-leone",
+          "name": "Sierra Leone",
+          "answers": [
+              "sierra leone",
+              "sierra-leone"
+          ]
+      },
+      {
+          "key": "singapore",
+          "name": "Singapore",
+          "answers": [
+              "singapore"
+          ]
+      },
+      {
+          "key": "slovakia",
+          "name": "Slovakia",
+          "answers": [
+              "slovakia"
+          ]
+      },
+      {
+          "key": "slovenia",
+          "name": "Slovenia",
+          "answers": [
+              "slovenia",
+              "republic of slovenia"
+          ]
+      },
+      {
+          "key": "solomon-islands",
+          "name": "Solomon Islands",
+          "answers": [
+              "solomon islands"
+          ]
+      },
+      {
+          "key": "somalia",
+          "name": "Somalia",
+          "answers": [
+              "somalia"
+          ]
+      },
+      {
+          "key": "south-africa",
+          "name": "South Africa",
+          "answers": [
+              "south africa",
+              "republic of south africa",
+              "rsa"
+          ]
+      },
+      {
+          "key": "south-korea",
+          "name": "South Korea",
+          "answers": [
+              "south korea",
+              "republic of korea"
+          ]
+      },
+      {
+          "key": "south-sudan",
+          "name": "South Sudan",
+          "answers": [
+              "south sudan"
+          ]
+      },
+      {
+          "key": "spain",
+          "name": "Spain",
+          "answers": [
+              "spain",
+              "kingdom of spain"
+          ]
+      },
+      {
+          "key": "sri-lanka",
+          "name": "Sri Lanka",
+          "answers": [
+              "sri lanka",
+              "ceylon"
+          ]
+      },
+      {
+          "key": "st-eustatius",
+          "name": "Sint Eustatius",
+          "answers": [
+              "sint eustatius"
+          ]
+      },
+      {
+          "key": "st-martin",
+          "name": "St. Martin",
+          "answers": [
+              "st. martin",
+              "saint martin",
+              "st martin"
+          ]
+      },
+      {
+          "key": "st-patrick",
+          "name": "St. Patrick",
+          "answers": [
+              "st. patrick",
+              "st patrick",
+              "saint patrick"
+          ]
+      },
+      {
+          "key": "sudan",
+          "name": "Sudan",
+          "answers": [
+              "sudan"
+          ]
+      },
+      {
+          "key": "suriname",
+          "name": "Suriname",
+          "answers": [
+              "suriname",
+              "republic of suriname"
+          ]
+      },
+      {
+          "key": "swaziland",
+          "name": "Eswatini",
+          "answers": [
+              "eswatini",
+              "kingdom of eswatini"
+          ]
+      },
+      {
+          "key": "sweden",
+          "name": "Sweden",
+          "answers": [
+              "sweden"
+          ]
+      },
+      {
+          "key": "switzerland",
+          "name": "Switzerland",
+          "answers": [
+              "switzerland"
+          ]
+      },
+      {
+          "key": "syria",
+          "name": "Syria",
+          "answers": [
+              "syria"
+          ]
+      },
+      {
+          "key": "taiwan",
+          "name": "Taiwan",
+          "answers": [
+              "taiwan"
+          ]
+      },
+      {
+          "key": "tajikistan",
+          "name": "Tajikistan",
+          "answers": [
+              "tajikistan"
+          ]
+      },
+      {
+          "key": "tanzania",
+          "name": "Tanzania",
+          "answers": [
+              "tanzania",
+              "united republic of tanzania"
+          ]
+      },
+      {
+          "key": "thailand",
+          "name": "Thailand",
+          "answers": [
+              "thailand",
+              "kingdom of thailand"
+          ]
+      },
+      {
+          "key": "togo",
+          "name": "Togo",
+          "answers": [
+              "togo"
+          ]
+      },
+      {
+          "key": "tonga",
+          "name": "Tonga",
+          "answers": [
+              "tonga",
+              "kingdom of tonga"
+          ]
+      },
+      {
+          "key": "trinidad-and-tobago",
+          "name": "Trinidad and Tobago",
+          "answers": [
+              "trinidad and tobago",
+              "trinidad-and-tobago",
+              "trinidad & tobago"
+          ]
+      },
+      {
+          "key": "tunisia",
+          "name": "Tunisia",
+          "answers": [
+              "tunisia"
+          ]
+      },
+      {
+          "key": "turkey",
+          "name": "Turkey",
+          "answers": [
+              "turkey",
+              "republic of turkey"
+          ]
+      },
+      {
+          "key": "turkmenistan",
+          "name": "Turkmenistan",
+          "answers": [
+              "turkmenistan"
+          ]
+      },
+      {
+          "key": "tuvalu",
+          "name": "Tuvalu",
+          "answers": [
+              "tuvalu"
+          ]
+      },
+      {
+          "key": "uganda",
+          "name": "Uganda",
+          "answers": [
+              "uganda"
+          ]
+      },
+      {
+          "key": "ukraine",
+          "name": "Ukraine",
+          "answers": [
+              "ukraine"
+          ]
+      },
+      {
+          "key": "united-arab-emirates",
+          "name": "United Arab Emirates",
+          "answers": [
+              "united arab emirates",
+              "united-arab-emirates",
+              "uae",
+              "dubai",
+              "abu dhabi"
+          ]
+      },
+      {
+          "key": "united-kingdom",
+          "name": "United Kingdom",
+          "answers": [
+              "united kingdom",
+              "uk",
+              "great britain",
+              "britain",
+              "gb"
+          ]
+      },
+      {
+          "key": "united-states-of-america",
+          "name": "The United States",
+          "answers": [
+              "united states",
+              "united states of america",
+              "usa",
+              "us",
+              "america",
+              "The United States"
+          ]
+      },
+      {
+          "key": "uruguay",
+          "name": "Uruguay",
+          "answers": [
+              "uruguay"
+          ]
+      },
+      {
+          "key": "uzbekistan",
+          "name": "Uzbekistan",
+          "answers": [
+              "uzbekistan"
+          ]
+      },
+      {
+          "key": "vanuatu",
+          "name": "Vanuatu",
+          "answers": [
+              "vanuatu",
+              "republic of vanuatu"
+          ]
+      },
+      {
+          "key": "vatican-city",
+          "name": "Vatican City",
+          "answers": [
+              "vatican city",
+              "holy see",
+              "the vatican city"
+          ]
+      },
+      {
+          "key": "venezuela",
+          "name": "Venezuela",
+          "answers": [
+              "venezuela"
+          ]
+      },
+      {
+          "key": "vietnam",
+          "name": "Vietnam",
+          "answers": [
+              "vietnam",
+              "socialist republic of vietnam"
+          ]
+      },
+      {
+          "key": "wales",
+          "name": "Wales",
+          "answers": [
+              "wales"
+          ]
+      },
+      {
+          "key": "yemen",
+          "name": "Yemen",
+          "answers": [
+              "yemen"
+          ]
+      },
+      {
+          "key": "zambia",
+          "name": "Zambia",
+          "answers": [
+              "zambia"
+          ]
+      },
+      {
+          "key": "zimbabwe",
+          "name": "Zimbabwe",
+          "answers": [
+              "zimbabwe"
+          ]
+      }
+  ]
+}

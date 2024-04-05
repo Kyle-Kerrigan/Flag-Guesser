@@ -1,24 +1,26 @@
 // Global Variables
 let currentCountry;
-let selectedSuggestionIndex = -1;
 let countries = [];
-let friendlyCountries = [];
+let selectedSuggestionIndex = -1;
 let isProcessingGuess = false;
 let guessInput;
+let correctGuesses = 0; // Track correct guesses
+let skippedCountries = 0; // Track skipped countries
 
 // Initialize Game
 function initializeGame() {
+  guessInput = document.getElementById("guess");
   fetchDataAndSetup();
   setupEventListeners();
+  updateScoreDisplay(); // Initialize the score display
 }
 
 // Fetch Data and Setup Game
 function fetchDataAndSetup() {
-  fetch('countries.json')
+  fetch('./unified_countries.json') // Adjust the path as necessary
     .then(response => response.json())
     .then(data => {
       countries = data.countries;
-      friendlyCountries = data.friendlyCountries;
       setRandomCountry();
     })
     .catch(error => console.error('Error loading the countries data:', error));
@@ -26,70 +28,67 @@ function fetchDataAndSetup() {
 
 // Set Random Country and Display Flag
 function setRandomCountry() {
-  currentCountry = countries[Math.floor(Math.random() * countries.length)];
-  displayFlag(currentCountry);
+  const randomIndex = Math.floor(Math.random() * countries.length);
+  currentCountry = countries[randomIndex];
+  displayFlag();
+}
+
+// Display Flag
+function displayFlag() {
+  const flagURL = `https://cdn.countryflags.com/thumbs/${currentCountry.key}/flag-800.png`;
+  document.getElementById("flag").src = flagURL;
+  guessInput.value = "";
+  document.getElementById("result").textContent = "";
 }
 
 // Setup Event Listeners
 function setupEventListeners() {
-  guessInput = document.getElementById("guess");
   document.querySelector("form").addEventListener("submit", checkGuess);
   document.getElementById("skip").addEventListener("click", skipFlag);
   document.getElementById("reveal").addEventListener("click", revealAnswer);
   guessInput.addEventListener("input", filterSuggestions);
-  document.addEventListener("click", hideSuggestionsOnClickOutside);
   guessInput.addEventListener("keydown", handleKeyDownForSuggestions);
+
+  document.addEventListener("click", (event) => {
+    const guessContainer = document.getElementById('guess-container');
+    const suggestionsPanel = document.getElementById('suggestions');
+    if (!guessContainer.contains(event.target)) {
+      suggestionsPanel.style.display = 'none';
+      // Reset the border-radius regardless of suggestions visibility
+      guessContainer.style.borderRadius = '0.5em';
+    }
+  });
 }
 
-// Display Flag
-function displayFlag(country) {
-  document.getElementById("flag").src = `https://cdn.countryflags.com/thumbs/${country}/flag-800.png`;
-  guessInput.value = "";
-  document.getElementById("result").textContent = "";
+// Update Score Display
+function updateScoreDisplay() {
+  document.getElementById("correctGuesses").textContent = `Correct Guesses: ${correctGuesses}`;
+  document.getElementById("skippedCountries").textContent = `Skipped Countries: ${skippedCountries}`;
 }
 
 // Check Guess
 function checkGuess(event) {
   event.preventDefault();
-  if (isProcessingGuess) return console.log("Already processing a guess.");
+  if (isProcessingGuess) return;
   isProcessingGuess = true;
 
-  // Normalize the input for comparison
   const inputValue = normalizeText(guessInput.value);
-  const matchFound = findCountryMatch(inputValue);
+  const matchFound = currentCountry.answers.some(answer => normalizeText(answer) === inputValue);
 
   if (matchFound) {
-    // Display success message and wait a moment before moving to the next flag
     document.getElementById("result").textContent = "You guessed correctly!";
-    setTimeout(() => {
-      setRandomCountry(); // Move to the next flag after a brief pause
-      document.getElementById("result").textContent = ""; // Optionally clear the message after moving to the next flag
-    }, 1000); // Adjust the delay here as needed
+    correctGuesses++;
+    updateScoreDisplay();
+    setTimeout(setRandomCountry, 1000); // Move on to the next flag after 1 second
   } else {
-    // Immediate feedback for incorrect guesses
     document.getElementById("result").textContent = "Try again!";
+    // Clear the "Try again!" message after 1 second
+    setTimeout(() => {
+      document.getElementById("result").textContent = "";
+    }, 1000);
   }
 
-  // Reset state and UI elements
   isProcessingGuess = false;
-  document.getElementById("suggestions").style.display = "none";
-  selectedSuggestionIndex = -1;
-}
-
-// Find Country Match
-function findCountryMatch(inputValue) {
-  // Attempt to find a country that matches the input value
-  const matchedCountry = friendlyCountries.find(country => {
-    const normalizedCountryName = normalizeText(country.name);
-    return normalizedCountryName === inputValue || country.answers.some(answer => normalizeText(answer) === inputValue);
-  });
-
-  // Update currentCountry to the matched country for consistency
-  if (matchedCountry) {
-    currentCountry = matchedCountry.name;
-    return true; // Match found
-  }
-  return false; // No match found
 }
 
 // Normalize Text
@@ -97,65 +96,121 @@ function normalizeText(text) {
   return text.toLowerCase().replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").trim();
 }
 
+// Reveal Answer and treat it like a skip for score
+function revealAnswer() {
+  document.getElementById("result").textContent = `The answer is: ${currentCountry.name}.`;
+  skippedCountries++; // Increment skipped countries as revealing is treated like skipping
+  updateScoreDisplay(); // Update score display
+  setTimeout(setRandomCountry, 1500); // Delay before showing the next flag
+}
+
+// Skip Flag and Temporarily Show Skipped Country Name
+function skipFlag(event) {
+  event.preventDefault();
+
+  // Temporarily show the skipped country's name
+  const skippedCountryName = currentCountry.name; // Store the name of the current country
+  setRandomCountry(); // Immediately set a new random country
+
+  document.getElementById("result").textContent = `Skipped: ${skippedCountryName}`;
+  skippedCountries++; // Increment skipped countries count
+  updateScoreDisplay(); // Update score display
+  
+  // Clear the "Skipped: ..." message after 2000ms
+  setTimeout(() => {
+    document.getElementById("result").textContent = "";
+  }, 1500);
+}
+
 // Filter Suggestions
 function filterSuggestions() {
-  const filter = normalizeText(guessInput.value);
+  const input = normalizeText(guessInput.value);
   const suggestionsPanel = document.getElementById('suggestions');
+  const guessContainer = document.getElementById('guess-container');
   suggestionsPanel.innerHTML = '';
-  selectedSuggestionIndex = -1;
 
-  if (filter) {
-    const filteredCountries = friendlyCountries.filter(c => normalizeText(c.name).includes(filter));
-    filteredCountries.forEach(country => createSuggestionElement(country.name, suggestionsPanel));
-    suggestionsPanel.style.display = filteredCountries.length > 0 ? 'block' : 'none';
+  const filteredCountries = countries.filter(country =>
+    normalizeText(country.name).includes(input) ||
+    country.answers.some(answer => normalizeText(answer).includes(input))
+  );
+
+  filteredCountries.forEach(country => {
+    const div = document.createElement('div');
+    div.textContent = country.name;
+    div.addEventListener('click', () => {
+      guessInput.value = country.name;
+      checkGuess(new Event('submit'));
+      // Hide suggestions after selection
+      suggestionsPanel.style.display = 'none';
+      guessContainer.style.borderRadius = '0.5em'; // Reset border radius
+    });
+    suggestionsPanel.appendChild(div);
+  });
+
+  if (filteredCountries.length > 0) {
+    suggestionsPanel.style.display = 'block';
+    guessContainer.style.borderRadius = '0.5em 0.5em 0em 0em'; // Adjust border radius for suggestions visibility
   } else {
-    suggestionsPanel.style.display = "none";
-  }
-}
-
-// Create Suggestion Element
-function createSuggestionElement(countryName, parentElement) {
-  const div = document.createElement('div');
-  div.textContent = countryName;
-  div.addEventListener('click', () => selectSuggestion(countryName));
-  parentElement.appendChild(div);
-}
-
-// Select Suggestion
-function selectSuggestion(countryName) {
-  guessInput.value = countryName;
-  document.getElementById('suggestions').style.display = 'none';
-  checkGuess(new Event('submit'));
-}
-
-// Skip Flag
-function skipFlag() {
-  const previousCountryName = currentCountry;
-  setRandomCountry(); // This will automatically update the flag and reset the guess input
-
-  // Optionally display the name of the country that was skipped
-  // Note: If you want to display the friendly name instead of the country code, you'll need to adjust this
-  const friendlyName = friendlyCountries.find(country => normalizeText(country.name) === normalizeText(previousCountryName))?.name || "Unknown";
-  document.getElementById("result").textContent = `Skipped: ${friendlyName}`;
-}
-
-// Reveal Answer
-function revealAnswer() {
-  const country = friendlyCountries.find(country => normalizeText(country.name) === normalizeText(currentCountry));
-  const countryName = country ? country.name : "Unknown";
-  document.getElementById("result").textContent = `The answer is: ${countryName}.`;
-}
-
-// Hide Suggestions on Click Outside
-function hideSuggestionsOnClickOutside(event) {
-  if (!guessInput.contains(event.target)) {
-    document.getElementById("suggestions").style.display = "none";
+    suggestionsPanel.style.display = 'none';
+    guessContainer.style.borderRadius = '0.5em'; // Reset border radius when no suggestions
   }
 }
 
 // Handle Key Down for Suggestions
 function handleKeyDownForSuggestions(event) {
-  // Implementation of arrow key navigation and selection logic
+  const suggestionsPanel = document.getElementById('suggestions');
+  const suggestions = suggestionsPanel.querySelectorAll('div');
+
+  if (!suggestions.length) return;
+
+  // Capture current scroll position to maintain it after navigating suggestions
+  let currentScrollPosition = suggestionsPanel.scrollTop;
+
+  switch (event.key) {
+    case 'ArrowDown':
+      if (selectedSuggestionIndex < suggestions.length - 1) {
+        selectedSuggestionIndex++;
+      } else {
+        selectedSuggestionIndex = 0; // Loop back to the top
+      }
+      event.preventDefault(); // Prevent cursor from moving to the end of input
+      break;
+    case 'ArrowUp':
+      if (selectedSuggestionIndex > 0) {
+        selectedSuggestionIndex--;
+      } else {
+        selectedSuggestionIndex = suggestions.length - 1; // Loop back to the bottom
+      }
+      event.preventDefault(); // Prevent cursor from moving to the start of input
+      break;
+    case 'Enter':
+      event.preventDefault(); // Prevent form submission
+      if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
+        suggestions[selectedSuggestionIndex].click();
+      }
+      return; // Exit the function to avoid deselecting
+    default:
+      return; // Exit for all other keys to allow normal input behavior
+  }
+
+  // Highlight the selected suggestion and scroll into view if necessary
+  highlightSuggestion(suggestions, selectedSuggestionIndex);
+  
+  // Restore the scroll position to where it was before navigating
+  suggestionsPanel.scrollTop = currentScrollPosition;
 }
 
-initializeGame();
+function highlightSuggestion(suggestions, index) {
+  suggestions.forEach((div, i) => {
+    if (i === index) {
+      div.classList.add('highlighted');
+      // Optionally, scroll into view
+      div.scrollIntoView({ block: 'nearest', inline: 'start' });
+    } else {
+      div.classList.remove('highlighted');
+    }
+  });
+}
+
+// Initialize the game
+document.addEventListener('DOMContentLoaded', initializeGame);

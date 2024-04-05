@@ -7,23 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <title>Guess the Flag-1</title>
+    <title>Guess the Flag</title>
 </head>
 <body>
     <h1>Guess the Flag</h1>
     <form action="#" method="post">
         <div id="flag-container">
             <div><img id="flag" src="" alt="Flag"></div>
-            <div><button type="submit" name="submit">Submit</button>
+            <div>
+                <button type="submit" name="submit">Submit</button>
                 <button type="button" id="skip">Skip</button>
-                <button type="button" id="reveal">Reveal</button></div>
-                <div id="guess-container">
-                    <input type="text" id="guess" name="guess" placeholder="Enter your guess" onInput="filterSuggestions()">
-                    <div id="suggestions" class="suggestions"></div>
-                </div>                
+                <button type="button" id="reveal">Reveal</button>
+            </div>
+            <div id="guess-container">
+                <input type="text" id="guess" name="guess" placeholder="Enter your guess" onInput="filterSuggestions()">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <p id="result"></p>
+            <div id="scoreTracker">
+                <p id="correctGuesses">Correct Guesses: 0</p>
+                <p id="skippedCountries">Skipped/Revealed Countries: 0</p>
+            </div>                  
         </div>
     </form>
-    <p id="result"></p>
     <script src="app.js"></script>
 </body>
 </html>
